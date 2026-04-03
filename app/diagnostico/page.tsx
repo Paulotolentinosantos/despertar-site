@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import { trackLead } from "../lib/tracking"
+import { trackLead } from "../lib/tracking";
 
 const questions = [
   "Sinto que estou vivendo abaixo do meu potencial, mas não consigo mudar isso.",
@@ -285,8 +285,9 @@ export default function DiagnosticoPage() {
         medium: utm_medium,
         campaign: utm_campaign,
         content_name: "Quiz Diagnóstico",
-      })
+      });
 
+      setIsSubmitting(false);
       setStep("result");
     } catch (error) {
       console.error(error);
