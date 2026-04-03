@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "O Despertar de um Propósito",
   description: "Do autoconhecimento à ação.",
+  other: {
+    "facebook-domain-verification": "u8g6qvbxwinwdd56kjjo0dsnvcaflx",
+  },
 };
 
 export default function RootLayout({
