@@ -16,9 +16,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "O Despertar de um Propósito",
   description: "Do autoconhecimento à ação.",
-  other: {
-    "facebook-domain-verification": "u8g6qvbxwinwdd56kjjo0dsnvcalfx",
-  },
 };
 
 export default function RootLayout({
@@ -58,7 +55,7 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1508420744058302');
+            fbq('init', '1476950003989484');
             fbq('track', 'PageView');
           `}
         </Script>
@@ -73,7 +70,7 @@ export default function RootLayout({
             width="1"
             style={{ display: "none" }}
             alt=""
-            src="https://www.facebook.com/tr?id=1508420744058302&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=1476950003989484&ev=PageView&noscript=1"
           />
         </noscript>
       </body>
