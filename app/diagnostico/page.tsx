@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { trackLead } from "../lib/tracking"
 
 const questions = [
   "Sinto que estou vivendo abaixo do meu potencial, mas não consigo mudar isso.",
@@ -278,6 +279,13 @@ export default function DiagnosticoPage() {
         setIsSubmitting(false);
         return;
       }
+
+      trackLead({
+        source: utm_source,
+        medium: utm_medium,
+        campaign: utm_campaign,
+        content_name: "Quiz Diagnóstico",
+      })
 
       setStep("result");
     } catch (error) {
