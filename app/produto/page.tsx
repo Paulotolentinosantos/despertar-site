@@ -403,7 +403,7 @@ export default function ProdutoPage() {
 
                 <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
                   <iframe
-                    src="https://www.youtube.com/embed/MpKMDwJnpsI?rel=0&modestbranding=1"
+                    src="https://www.youtube.com/embed/MpKMDwJnpsI"
                     title="Vídeo de apresentação - O Despertar de um Propósito"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
@@ -664,6 +664,97 @@ export default function ProdutoPage() {
                 </motion.div>
               ))}
             </motion.div>
+
+            {/* BLOCO DE FERRAMENTAS / PRÁTICA */}
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="mt-16 max-w-4xl"
+            >
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
+              >
+                Mais do que conteúdo
+              </motion.p>
+
+              <motion.h3
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-4 text-2xl font-semibold text-[#FFF0D1] sm:text-3xl"
+              >
+                Você não vai ficar só entendendo.
+                <br />
+                Você vai começar a agir.
+              </motion.h3>
+
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-6 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+              >
+                Dentro do curso, você vai encontrar ferramentas práticas que te ajudam
+                a transformar clareza em ação real.
+                <br /><br />
+                A ideia não é só você entender sua vida.
+                É você começar a organizar, estruturar e executar com mais direção.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.15 }}
+              className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
+            >
+              {[
+                {
+                  title: "Clareza de propósito e direção",
+                  text: "Ferramentas que te ajudam a entender quem você é, o que faz sentido e qual direção seguir.",
+                },
+                {
+                  title: "Organização da vida e prioridades",
+                  text: "Estruturas para organizar áreas da sua vida, seu tempo e suas prioridades com mais consciência.",
+                },
+                {
+                  title: "Metas e plano de ação",
+                  text: "Um caminho para transformar intenção em objetivos claros e ações práticas.",
+                },
+                {
+                  title: "Rotina e execução",
+                  text: "Formas de sair da teoria e começar a construir consistência no seu dia a dia.",
+                },
+                {
+                  title: "Quebra de bloqueios emocionais",
+                  text: "Processos para lidar com medos, ansiedade e gatilhos que travam sua ação.",
+                },
+                {
+                  title: "Equilíbrio e alinhamento",
+                  text: "Uma visão mais integrada para construir uma vida coerente com quem você quer ser.",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  variants={cardVariants}
+                  initial={{ opacity: 1, y: 0, scale: 1 }}
+                  whileHover={{ y: -6, scale: 1.01 }}
+                  transition={{ duration: 0.22 }}
+                  className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+                >
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#E7992A]">
+                    {item.title}
+                  </p>
+                  <p className="mt-4 text-sm leading-7 text-[#FFEAC5]/75 sm:text-base">
+                    {item.text}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+
           </ProductSection>
 
           {/* MÉTODO */}
