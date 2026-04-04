@@ -1307,7 +1307,7 @@ export default function ProdutoPage() {
                   <br />
                   <br />
                   Se dentro de 7 dias você sentir que não faz sentido para você,
-                  é só pedir reembolso.
+                  é só enviar um e-mail para suporte@odespertardeumproposito.com.br solicitando o reembolso.
                   <br />
                   <br />
                   Sem burocracia.
@@ -1365,7 +1365,7 @@ export default function ProdutoPage() {
                 },
                 {
                   q: "Por quanto tempo terei acesso?",
-                  a: "Aqui você pode preencher de acordo com sua configuração real de acesso, por exemplo: 1 ano de acesso, acesso por 6 meses ou acesso vitalício.",
+                  a: "Acesso vitalício.",
                 },
                 {
                   q: "Como funciona a garantia?",
@@ -1678,7 +1678,7 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-5 text-sm text-[#FFEAC5]/60"
               >
-                Quando você definir seu checkout, é só trocar o href do botão final.
+                Quando definir checkout, é só trocar o href do botão final.
               </motion.p>
             </motion.div>
           </ProductSection>
