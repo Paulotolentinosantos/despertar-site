@@ -341,17 +341,47 @@ export async function POST(req: Request) {
       acao,
     });
 
-    await transporter.sendMail({
-      from: `"${process.env.MAIL_FROM_NAME}" <${process.env.MAIL_FROM_ADDRESS}>`,
-      to: email,
-      subject: emailContent.subject,
-      text: emailContent.text,
-      html: emailContent.html,
-    });
+    console.log("Preparando envio de e-mail para:", email);
+    console.log("SMTP host configurado:", !!process.env.ZOHO_SMTP_HOST);
+    console.log("SMTP port configurado:", !!process.env.ZOHO_SMTP_PORT);
+    console.log("SMTP user configurado:", !!process.env.ZOHO_SMTP_USER);
+    console.log("SMTP pass configurado:", !!process.env.ZOHO_SMTP_PASS);
+    console.log("MAIL_FROM_NAME configurado:", !!process.env.MAIL_FROM_NAME);
+    console.log(
+      "MAIL_FROM_ADDRESS configurado:",
+      !!process.env.MAIL_FROM_ADDRESS
+    );
+
+    let emailSent = false;
+    let emailErrorMessage = "";
+
+    try {
+      const mailResult = await transporter.sendMail({
+        from: `"${process.env.MAIL_FROM_NAME}" <${process.env.MAIL_FROM_ADDRESS}>`,
+        to: email,
+        subject: emailContent.subject,
+        text: emailContent.text,
+        html: emailContent.html,
+      });
+
+      emailSent = true;
+      console.log("E-mail enviado com sucesso. Message ID:", mailResult.messageId);
+    } catch (mailError) {
+      console.error("Erro ao enviar e-mail pelo Zoho:", mailError);
+
+      emailErrorMessage =
+        mailError instanceof Error
+          ? mailError.message
+          : "Falha desconhecida ao enviar e-mail";
+    }
 
     return NextResponse.json({
       ok: true,
-      message: "Quiz recebido, salvo e e-mail enviado com sucesso.",
+      message: emailSent
+        ? "Quiz recebido, salvo e e-mail enviado com sucesso."
+        : "Quiz recebido e salvo com sucesso, mas o e-mail não pôde ser enviado.",
+      emailSent,
+      emailErrorMessage,
     });
   } catch (error) {
     console.error("Erro no endpoint /api/quiz-submit:", error);
