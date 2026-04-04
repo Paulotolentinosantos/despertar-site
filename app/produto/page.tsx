@@ -58,7 +58,7 @@ function ProductSection({
 }) {
   return (
     <section
-      className={`relative -mt-16 overflow-hidden px-6 pb-14 pt-24 md:px-10 lg:px-14 lg:pt-28 ${className}`}
+      className={`relative -mt-16 overflow-hidden px-6 pb-14 pt-0 md:px-10 lg:px-14 lg:pt-28 ${className}`}
     >
       <div className="absolute inset-0 bg-[#0F1728]/82 backdrop-blur-[6px]" />
       <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-[linear-gradient(90deg,rgba(255,255,255,0.04),transparent)]" />
