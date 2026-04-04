@@ -403,7 +403,7 @@ export default function ProdutoPage() {
 
                 <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
                   <iframe
-                    src="https://www.youtube.com/embed/MpKMDwJnpsI&t=77s?rel=0&modestbranding=1"
+                    src="https://www.youtube.com/embed/MpKMDwJnpsI?rel=0&modestbranding=1"
                     title="Vídeo de apresentação - O Despertar de um Propósito"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
