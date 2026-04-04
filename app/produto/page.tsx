@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
@@ -58,7 +58,7 @@ function ProductSection({
 }) {
   return (
     <section
-      className={`relative -mt-16 overflow-hidden px-6 pb-14 pt-0 md:px-10 lg:px-14 lg:pt-28 ${className}`}
+      className={`relative -mt-16 overflow-hidden px-6 pb-14 pt-24 md:px-10 lg:px-14 lg:pt-28 ${className}`}
     >
       <div className="absolute inset-0 bg-[#0F1728]/82 backdrop-blur-[6px]" />
       <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-[linear-gradient(90deg,rgba(255,255,255,0.04),transparent)]" />
@@ -79,7 +79,8 @@ export default function ProdutoPage() {
         ctaHref="#oferta"
         logoSrc="/logo-produto.png"
       />
-      <div className="relative overflow-hidden bg-[#07101f] px-4 pb-24 pt-24 text-[#FFEAC5] md:px-8 lg:px-16">
+
+      <div className="relative overflow-hidden bg-[#07101f] px-4 pb-24 pt-20 text-[#FFEAC5] md:px-8 lg:px-16">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(180deg,#07101f_0%,#081325_30%,#07101f_100%)]" />
 
@@ -108,7 +109,7 @@ export default function ProdutoPage() {
 
         <div className="relative mx-auto max-w-7xl">
           {/* HERO */}
-          <section className="relative overflow-hidden px-6 pb-16 pt-16 md:px-10 lg:px-14 lg:pt-20">
+          <section className="relative overflow-hidden px-6 pb-16 pt-2 md:px-10 lg:px-14 lg:pt-4">
             <div className="absolute inset-0 bg-[#0F1728]/82 backdrop-blur-[6px]" />
             <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-[linear-gradient(90deg,rgba(255,255,255,0.04),transparent)]" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-[linear-gradient(270deg,rgba(255,255,255,0.04),transparent)]" />
@@ -121,7 +122,6 @@ export default function ProdutoPage() {
               animate="show"
               className="relative z-10 max-w-5xl"
             >
-
               <motion.h1
                 variants={fadeUpVariants}
                 initial={{ opacity: 1, y: 0 }}
