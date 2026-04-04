@@ -351,6 +351,92 @@ export default function ProdutoPage() {
             </motion.div>
           </ProductSection>
 
+          {/* VÍDEO DE APRESENTAÇÃO */}
+          <ProductSection>
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="mx-auto max-w-5xl"
+            >
+              <motion.div className="text-center">
+                <motion.p
+                  variants={fadeUpVariants}
+                  initial={{ opacity: 1, y: 0 }}
+                  className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
+                >
+                  Assista antes de continuar
+                </motion.p>
+
+                <motion.h2
+                  variants={fadeUpVariants}
+                  initial={{ opacity: 1, y: 0 }}
+                  className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
+                >
+                  Isso pode te ajudar a enxergar com mais clareza
+                  <br />
+                  o que está acontecendo na sua vida hoje.
+                </motion.h2>
+
+                <motion.p
+                  variants={fadeUpVariants}
+                  initial={{ opacity: 1, y: 0 }}
+                  className="mx-auto mt-6 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+                >
+                  Se esse processo fizer sentido para você, continue a página depois
+                  do vídeo e veja como o curso foi estruturado para te ajudar a sair
+                  da confusão e entrar em ação com mais direção.
+                </motion.p>
+              </motion.div>
+
+              <motion.div
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-10 overflow-hidden rounded-[28px] border border-white/10 bg-[#0A1322] shadow-[0_20px_60px_rgba(0,0,0,0.28)]"
+              >
+                <div className="border-b border-white/10 bg-white/[0.03] px-5 py-4">
+                  <p className="text-sm text-[#FFEAC5]/65">
+                    Vídeo de apresentação
+                  </p>
+                </div>
+
+                <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+                  <iframe
+                    src="https://www.youtube.com/embed/MpKMDwJnpsI&t=77s?rel=0&modestbranding=1"
+                    title="Vídeo de apresentação - O Despertar de um Propósito"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute left-0 top-0 h-full w-full"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={sectionVariants}
+                initial={false}
+                whileInView="show"
+                viewport={{ once: false, amount: 0.2 }}
+                className="mt-8 flex flex-wrap items-center justify-center gap-3"
+              >
+                {[
+                  "Vídeo hospedado no YouTube",
+                  "Sem custo extra",
+                  "Pode trocar o link depois",
+                ].map((chip, i) => (
+                  <motion.span
+                    key={i}
+                    variants={chipVariants}
+                    initial={{ opacity: 1, y: 0, scale: 1 }}
+                    className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-[#FFEAC5]/65"
+                  >
+                    {chip}
+                  </motion.span>
+                ))}
+              </motion.div>
+            </motion.div>
+          </ProductSection>
+
           {/* O QUE É */}
           <ProductSection>
             <motion.div
