@@ -74,7 +74,7 @@ function ProductSection({
 export default function ProdutoPage() {
   return (
     <main className="bg-[#0F1728]">
-      <Navbar ctaLabel="Quero fazer parte" ctaHref="#oferta" />
+      <Navbar ctaLabel="Quero começar minha mudança" ctaHref="#oferta" />
 
       <div className="relative overflow-hidden bg-[#07101f] px-4 pb-24 pt-24 text-[#FFEAC5] md:px-8 lg:px-16">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -160,7 +160,7 @@ export default function ProdutoPage() {
                   transition={{ duration: 0.2 }}
                   className="inline-flex items-center justify-center rounded-full bg-[#E7992A] px-8 py-4 text-[clamp(0.96rem,1vw,1.04rem)] font-semibold text-[#0F1728] shadow-[0_10px_30px_rgba(231,153,42,0.18)]"
                 >
-                  Quero fazer parte
+                  Quero começar minha mudança
                 </motion.a>
 
                 <motion.a
@@ -1399,7 +1399,7 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
               >
-                Seu próximo passo começa aqui
+                Sua oportunidade de entrar começa aqui
               </motion.p>
 
               <motion.h2
@@ -1411,7 +1411,7 @@ export default function ProdutoPage() {
                 <br />
                 mas continua travado,
                 <br />
-                esse é o seu próximo passo.
+                essa é a hora de começar.
               </motion.h2>
 
               <motion.p
@@ -1483,7 +1483,7 @@ export default function ProdutoPage() {
 
                 <div className="mt-8 rounded-2xl border border-[#E7992A]/20 bg-[#E7992A]/10 p-6 text-center">
                   <p className="text-sm uppercase tracking-[0.18em] text-[#FFEAC5]/65">
-                    Investimento para a primeira turma
+                    Condição especial para a primeira turma
                   </p>
 
                   <p className="mt-3 text-4xl font-semibold text-[#FFF0D1]">
@@ -1499,16 +1499,24 @@ export default function ProdutoPage() {
                   </p>
                 </div>
 
+                <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                  <p className="text-sm leading-7 text-[#FFEAC5]/72">
+                    Essa condição é exclusiva para os primeiros alunos.
+                    <br />
+                    <br />
+                    Como essa é a primeira turma, o valor atual foi definido como
+                    uma condição de entrada para validação.
+                    <br />
+                    <br />
+                    Nas próximas turmas, a tendência é que esse valor e as condições
+                    não sejam mais os mesmos.
+                  </p>
+                </div>
+
                 <p className="mt-6 text-sm leading-7 text-[#FFEAC5]/70">
-                  Esse valor não é definitivo.
-                  <br />
-                  <br />
-                  Ele está assim porque essa é a primeira versão do curso,
-                  e eu quero validar, melhorar e evoluir junto com os primeiros alunos.
-                  <br />
-                  <br />
                   Quem entra agora,
-                  entra com as melhores condições.
+                  entra com o melhor valor, com as melhores condições
+                  e participa dessa fase inicial de construção junto comigo.
                 </p>
 
                 <p className="mt-6 text-sm leading-7 text-[#FFEAC5]/60">
@@ -1529,7 +1537,7 @@ export default function ProdutoPage() {
                   transition={{ duration: 0.2 }}
                   className="inline-flex items-center justify-center rounded-full bg-[#E7992A] px-8 py-4 text-[clamp(0.96rem,1vw,1.04rem)] font-semibold text-[#0F1728] shadow-[0_10px_30px_rgba(231,153,42,0.18)]"
                 >
-                  Quero entrar agora
+                  Quero começar minha mudança
                 </motion.a>
               </motion.div>
 
