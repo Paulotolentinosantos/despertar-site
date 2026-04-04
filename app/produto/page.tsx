@@ -143,9 +143,8 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-8 max-w-3xl text-[clamp(1rem,1.2vw,1.22rem)] leading-[1.9] text-[#FFEAC5]/80"
               >
-                Descubra o que está te bloqueando, ganhe clareza sobre quem você é
-                e construa um caminho real para sair do lugar — com direção,
-                confiança e ação.
+                Descubra o que está te travando, pare de ficar perdido sem saber o que fazer
+                e comece a construir uma direção clara para sua vida, com mais segurança e ação.
               </motion.p>
 
               <motion.div
@@ -494,7 +493,7 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
               >
-                O que muda quando você entra nesse processo
+                O que começa a mudar quando você entra nesse processo
               </motion.p>
 
               <motion.h2
@@ -502,9 +501,19 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
               >
-                Você deixa de se sentir travado
-                e começa a entrar em movimento.
+                Você deixa de viver no automático
+                <br />
+                e começa a ter direção de verdade.
               </motion.h2>
+
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-6 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+              >
+                Ao longo do processo, você começa a perceber mudanças reais no seu dia a dia
+                — não só na forma como pensa, mas também na forma como decide, age e conduz a própria vida.
+              </motion.p>
             </motion.div>
 
             <motion.div
@@ -516,28 +525,28 @@ export default function ProdutoPage() {
             >
               {[
                 {
-                  title: "Mais clareza sobre si mesmo",
-                  text: "Você entende melhor seus padrões, emoções, forças, fragilidades e o que está por trás da sua confusão.",
+                  title: "Mais clareza sobre o que fazer",
+                  text: "Você para de ficar perdido entre mil possibilidades e começa a enxergar um caminho mais claro para seguir.",
                 },
                 {
-                  title: "Mais consciência dos bloqueios",
-                  text: "Você começa a enxergar o que trava sua ação e mantém você preso em ciclos de estagnação.",
+                  title: "Menos travamento na hora de agir",
+                  text: "Você entende melhor o que te bloqueia e começa a quebrar o ciclo de pensar demais e agir de menos.",
                 },
                 {
-                  title: "Mais equilíbrio interno",
-                  text: "Você sai do improviso emocional e constrói mais coerência entre mente, rotina, escolhas e direção.",
+                  title: "Mais segurança nas decisões",
+                  text: "Você passa a decidir com mais consciência, sem depender tanto da opinião dos outros para se validar.",
                 },
                 {
-                  title: "Mais direção",
-                  text: "Você desenvolve uma visão mais clara do que faz sentido para você e do que quer construir.",
+                  title: "Menos sensação de estar parado",
+                  text: "Você começa a sair da estagnação e a sentir que sua vida está, de fato, andando em uma direção mais coerente.",
                 },
                 {
-                  title: "Mais coragem para agir",
-                  text: "Você aprende a se mover com mais consciência, mesmo sem ter tudo resolvido ou perfeito.",
+                  title: "Mais consistência no que começa",
+                  text: "Você deixa de abandonar tudo no meio e começa a sustentar com mais firmeza aquilo que decidiu construir.",
                 },
                 {
-                  title: "Mais ação prática",
-                  text: "Você transforma reflexão em passos concretos, aplicáveis e alinhados à sua realidade.",
+                  title: "Mais alinhamento com quem você é",
+                  text: "Você entende melhor o que realmente faz sentido para você e começa a construir uma vida menos automática e mais autêntica.",
                 },
               ].map((item, i) => (
                 <motion.div
@@ -1086,9 +1095,9 @@ export default function ProdutoPage() {
                   initial={{ opacity: 1, y: 0 }}
                   className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl"
                 >
-                  Eu não criei esse curso para entregar teoria.
+                  Eu não criei isso só na teoria.
                   <br />
-                  Criei para ajudar pessoas a saírem do lugar.
+                  Eu criei vivendo isso na prática.
                 </motion.h2>
 
                 <motion.p
@@ -1099,14 +1108,58 @@ export default function ProdutoPage() {
                   Eu sou o Paulo.
                   <br />
                   <br />
-                  Criei esse processo a partir da percepção de um padrão muito comum:
-                  pessoas com potencial, mas presas em confusão, ansiedade, travamento
-                  e falta de direção.
+                  Durante muito tempo, fui uma pessoa que pensava demais e agia de menos.
+                  Tinha travas emocionais, insegurança em situações sociais, dificuldade de
+                  interação em vários contextos e uma tendência forte a buscar aprovação.
                   <br />
                   <br />
-                  Meu objetivo com esse trabalho é ajudar você a se conhecer com mais
-                  profundidade, entender o que está te bloqueando e construir uma vida
-                  mais coerente com quem você é.
+                  Eu sabia que precisava mudar, mas durante muito tempo não consegui sair
+                  do lugar com consistência.
+                </motion.p>
+
+                <motion.p
+                  variants={fadeUpVariants}
+                  initial={{ opacity: 1, y: 0 }}
+                  className="mt-5 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+                >
+                  Ao longo dos anos, comecei a mergulhar em autoconhecimento, comportamento
+                  humano, psicologia, desenvolvimento pessoal e construção de mentalidade.
+                  Mas não fiquei só estudando: comecei a testar, ajustar e aplicar tudo isso
+                  na prática da minha vida.
+                </motion.p>
+
+                <motion.p
+                  variants={fadeUpVariants}
+                  initial={{ opacity: 1, y: 0 }}
+                  className="mt-5 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+                >
+                  Com o tempo, saí de um padrão de travamento para uma vida com mais coragem,
+                  mais clareza e mais direção. Hoje, consigo me expor mais, apresentar projetos,
+                  lidar melhor com pessoas, tomar decisões com mais segurança e construir
+                  movimento sem depender tanto da aprovação dos outros.
+                </motion.p>
+
+                <motion.p
+                  variants={fadeUpVariants}
+                  initial={{ opacity: 1, y: 0 }}
+                  className="mt-5 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+                >
+                  Sou formado em Engenharia de Produção Mecânica, tenho especialização em
+                  Gestão de Projetos e desenvolvi minha visão justamente na integração entre
+                  método, estrutura, mentalidade e ação prática.
+                  <br />
+                  <br />
+                  Foi dessa combinação que nasceu esse processo.
+                </motion.p>
+
+                <motion.p
+                  variants={fadeUpVariants}
+                  initial={{ opacity: 1, y: 0 }}
+                  className="mt-5 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+                >
+                  O que você vai encontrar aqui não é algo vazio ou puramente conceitual.
+                  É um processo que foi vivido, testado, estruturado e transformado em um
+                  caminho para ajudar outras pessoas a saírem do lugar onde eu já estive.
                 </motion.p>
 
                 <motion.div
@@ -1120,6 +1173,7 @@ export default function ProdutoPage() {
                     "Clareza prática",
                     "Coragem emocional",
                     "Autoconhecimento com direção",
+                    "Método aplicado na vida real",
                   ].map((chip, i) => (
                     <motion.span
                       key={i}
@@ -1134,6 +1188,88 @@ export default function ProdutoPage() {
                 </motion.div>
               </motion.div>
             </div>
+          </ProductSection>
+
+          {/* PROVA SOCIAL INDIRETA / CONQUISTAS */}
+          <ProductSection>
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="max-w-4xl"
+            >
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
+              >
+                Resultados que reforçam esse processo
+              </motion.p>
+
+              <motion.h2
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl"
+              >
+                O que eu ensino aqui também foi validado
+                <br />
+                na minha vida e na minha trajetória profissional.
+              </motion.h2>
+
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-6 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+              >
+                Esse processo não nasceu só de estudo ou reflexão.
+                Ele também foi fortalecido por vivências reais, exposição prática,
+                desenvolvimento profissional e construção de coragem ao longo do tempo.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.15 }}
+              className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4"
+            >
+              {[
+                {
+                  title: "Formação e método",
+                  text: "Formação em Engenharia de Produção Mecânica e especialização em Gestão de Projetos, integrando estrutura, clareza e execução.",
+                },
+                {
+                  title: "Exposição na prática",
+                  text: "Experiência apresentando projetos, lidando com liderança e me colocando em contextos que antes eu evitaria.",
+                },
+                {
+                  title: "Reconhecimento profissional",
+                  text: "Participação em projetos de inovação, com reconhecimento e elogios ao longo da trajetória profissional.",
+                },
+                {
+                  title: "Mudança vivida",
+                  text: "Saída de um padrão de travamento, insegurança e excesso de pensamento para uma vida com mais coragem, direção e ação.",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  variants={cardVariants}
+                  initial={{ opacity: 1, y: 0, scale: 1 }}
+                  whileHover={{ y: -6, scale: 1.01 }}
+                  transition={{ duration: 0.22 }}
+                  className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+                >
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#E7992A]">
+                    {item.title}
+                  </p>
+                  <p className="mt-4 text-sm leading-7 text-[#FFEAC5]/75 sm:text-base">
+                    {item.text}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
           </ProductSection>
 
           {/* GARANTIA */}
