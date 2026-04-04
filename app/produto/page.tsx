@@ -74,8 +74,11 @@ function ProductSection({
 export default function ProdutoPage() {
   return (
     <main className="bg-[#0F1728]">
-      <Navbar ctaLabel="Quero começar minha mudança" ctaHref="#oferta" />
-
+      <Navbar
+        ctaLabel="Quero começar minha mudança"
+        ctaHref="#oferta"
+        logoSrc="/logo-produto.png"
+      />
       <div className="relative overflow-hidden bg-[#07101f] px-4 pb-24 pt-24 text-[#FFEAC5] md:px-8 lg:px-16">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(180deg,#07101f_0%,#081325_30%,#07101f_100%)]" />
