@@ -771,7 +771,7 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
               >
-                A lógica do processo
+                O método por trás do processo
               </motion.p>
 
               <motion.h2
@@ -779,6 +779,8 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
               >
+                Método CDA:
+                <br />
                 Clareza. Desbloqueio. Direção. Ação.
               </motion.h2>
 
@@ -787,10 +789,14 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-5 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
               >
-                Primeiro, você entende melhor quem é e o que está vivendo.
-                Depois, começa a enxergar os padrões que estão te travando.
-                A partir disso, constrói direção com mais consciência
-                e transforma isso em ação prática.
+                Esse processo não é aleatório.
+                Ele segue uma sequência lógica que te tira da confusão
+                e te leva para o movimento.
+                <br /><br />
+                Primeiro você ganha clareza.
+                Depois destrava o que está te impedindo.
+                Em seguida constrói direção.
+                E então transforma tudo isso em ação prática.
               </motion.p>
             </motion.div>
 
@@ -804,19 +810,19 @@ export default function ProdutoPage() {
               {[
                 {
                   title: "Clareza",
-                  text: "Entender melhor quem você é, onde está e por que continua se sentindo travado.",
+                  text: "Você entende melhor quem é, o que está vivendo e por que continua se sentindo travado.",
                 },
                 {
                   title: "Desbloqueio",
-                  text: "Identificar medos, crenças e padrões que interferem no seu movimento.",
+                  text: "Você identifica e começa a lidar com medos, crenças e padrões que travam sua ação.",
                 },
                 {
                   title: "Direção",
-                  text: "Construir visão, propósito e coerência com mais consciência.",
+                  text: "Você constrói uma visão mais clara de propósito e passa a enxergar um caminho possível.",
                 },
                 {
                   title: "Ação",
-                  text: "Transformar tudo isso em passos reais e sustentáveis na sua vida.",
+                  text: "Você transforma clareza em movimento real, com passos práticos e consistentes.",
                 },
               ].map((item, i) => (
                 <motion.div
@@ -835,6 +841,24 @@ export default function ProdutoPage() {
                   </p>
                 </motion.div>
               ))}
+            </motion.div>
+
+            <motion.div
+              variants={fadeUpVariants}
+              initial={{ opacity: 1, y: 0 }}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.25 }}
+              className="mt-12 max-w-3xl"
+            >
+              <p className="text-base leading-8 text-[#FFEAC5]/70 sm:text-lg">
+                A maioria das pessoas tenta começar pela ação.
+                <br /><br />
+                Mas sem clareza e sem resolver os bloqueios internos,
+                a ação não se sustenta.
+                <br /><br />
+                O método CDA organiza esse processo
+                para que você não fique preso no mesmo ciclo.
+              </p>
             </motion.div>
           </ProductSection>
 
@@ -1392,9 +1416,17 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-6 text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
               >
-                O Despertar de um Propósito foi criado para te ajudar a se
-                conhecer melhor, superar bloqueios internos, ganhar clareza
-                sobre sua direção e transformar isso em ação prática.
+                Agora você já entendeu o que está por trás do seu travamento
+                e como esse processo foi estruturado para te ajudar.
+                <br />
+                <br />
+                A pergunta é:
+                <br />
+                <br />
+                <span className="text-[#FFEAC5]">
+                  quanto vale para você sair da confusão
+                  e começar a construir uma vida com mais clareza e direção?
+                </span>
               </motion.p>
 
               <motion.div
@@ -1405,15 +1437,17 @@ export default function ProdutoPage() {
                 className="mx-auto mt-10 max-w-xl rounded-3xl border border-white/10 bg-white/5 p-8 text-left backdrop-blur-sm"
               >
                 <p className="text-sm uppercase tracking-[0.22em] text-[#E7992A]">
-                  O que você recebe
+                  O que você está levando
                 </p>
 
                 <div className="mt-6 space-y-4">
                   {[
                     "Acesso ao curso completo em formato digital",
-                    "Processo estruturado em etapas claras",
+                    "Processo estruturado com base no Método CDA",
                     "Conteúdo para autoconhecimento, desbloqueio emocional, clareza de propósito e ação prática",
-                    "Material que te ajuda a sair da confusão e construir direção com mais consciência",
+                    "Ferramentas práticas para sair da teoria e aplicar na vida real",
+                    "Bônus com aplicação de suporte para rotina, mentalidade e execução",
+                    "Garantia de 7 dias",
                   ].map((item, i) => (
                     <p key={i} className="text-[#FFEAC5]/85">
                       • {item}
@@ -1421,14 +1455,61 @@ export default function ProdutoPage() {
                   ))}
                 </div>
 
-                <div className="mt-8 rounded-2xl border border-[#E7992A]/20 bg-[#E7992A]/10 p-5">
-                  <p className="text-sm text-[#FFEAC5]/70">
-                    Aqui você pode colocar:
+                <div className="mt-8">
+                  <p className="text-sm leading-7 text-[#FFEAC5]/70">
+                    Isso não é só sobre assistir aulas.
+                    <br />
+                    <br />
+                    É sobre:
                   </p>
-                  <p className="mt-2 text-[#FFEAC5]">
-                    preço • condição de pagamento • bônus • garantia
+
+                  <div className="mt-4 space-y-2 text-[#FFEAC5]/80">
+                    <p>• entender quem você é de verdade</p>
+                    <p>• destravar padrões que te travam há anos</p>
+                    <p>• construir direção</p>
+                    <p>• e finalmente começar a agir</p>
+                  </div>
+
+                  <p className="mt-6 text-sm leading-7 text-[#FFEAC5]/70">
+                    Um processo como esse poderia facilmente custar
+                    R$1000, R$2000 ou mais.
                   </p>
                 </div>
+
+                <div className="mt-8 rounded-2xl border border-[#E7992A]/20 bg-[#E7992A]/10 p-6 text-center">
+                  <p className="text-sm uppercase tracking-[0.18em] text-[#FFEAC5]/65">
+                    Investimento para a primeira turma
+                  </p>
+
+                  <p className="mt-3 text-4xl font-semibold text-[#FFF0D1]">
+                    R$ 297
+                  </p>
+
+                  <p className="mt-2 text-sm text-[#FFEAC5]/70">
+                    ou em até 12x de R$29 no cartão
+                  </p>
+
+                  <p className="mt-3 text-xs text-[#FFEAC5]/50">
+                    Isso dá menos de R$1 por dia para começar a mudar sua direção.
+                  </p>
+                </div>
+
+                <p className="mt-6 text-sm leading-7 text-[#FFEAC5]/70">
+                  Esse valor não é definitivo.
+                  <br />
+                  <br />
+                  Ele está assim porque essa é a primeira versão do curso,
+                  e eu quero validar, melhorar e evoluir junto com os primeiros alunos.
+                  <br />
+                  <br />
+                  Quem entra agora,
+                  entra com as melhores condições.
+                </p>
+
+                <p className="mt-6 text-sm leading-7 text-[#FFEAC5]/60">
+                  O custo de continuar como está
+                  pode ser muito maior do que isso.
+                </p>
               </motion.div>
 
               <motion.div
