@@ -57,7 +57,9 @@ function ProductSection({
   className?: string
 }) {
   return (
-    <section className={`relative -mt-16 overflow-hidden px-8 pb-14 pt-24 md:px-10 lg:px-14 lg:pt-28 ${className}`}>
+    <section
+      className={`relative -mt-16 overflow-hidden px-6 pb-14 pt-24 md:px-10 lg:px-14 lg:pt-28 ${className}`}
+    >
       <div className="absolute inset-0 bg-[#0F1728]/82 backdrop-blur-[6px]" />
       <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-[linear-gradient(90deg,rgba(255,255,255,0.04),transparent)]" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-[linear-gradient(270deg,rgba(255,255,255,0.04),transparent)]" />
@@ -72,9 +74,9 @@ function ProductSection({
 export default function ProdutoPage() {
   return (
     <main className="bg-[#0F1728]">
-      <Navbar ctaLabel="Quero fazer parte" ctaHref="SEU_LINK_AQUI" />
+      <Navbar ctaLabel="Quero fazer parte" ctaHref="#oferta" />
 
-      <div className="relative overflow-hidden bg-[#07101f] px-6 pb-24 pt-24 text-[#FFEAC5] md:px-10 lg:px-16">
+      <div className="relative overflow-hidden bg-[#07101f] px-4 pb-24 pt-24 text-[#FFEAC5] md:px-8 lg:px-16">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(180deg,#07101f_0%,#081325_30%,#07101f_100%)]" />
 
@@ -103,7 +105,7 @@ export default function ProdutoPage() {
 
         <div className="relative mx-auto max-w-7xl">
           {/* HERO */}
-          <section className="relative overflow-hidden px-8 pb-16 pt-16 md:px-10 lg:px-14 lg:pt-20">
+          <section className="relative overflow-hidden px-6 pb-16 pt-16 md:px-10 lg:px-14 lg:pt-20">
             <div className="absolute inset-0 bg-[#0F1728]/82 backdrop-blur-[6px]" />
             <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-[linear-gradient(90deg,rgba(255,255,255,0.04),transparent)]" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-[linear-gradient(270deg,rgba(255,255,255,0.04),transparent)]" />
@@ -119,7 +121,7 @@ export default function ProdutoPage() {
               <motion.p
                 variants={fadeUpVariants}
                 initial={{ opacity: 1, y: 0 }}
-                className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
+                className="text-xs font-medium uppercase tracking-[0.24em] text-[#E7992A] sm:text-sm"
               >
                 O Despertar de um Propósito
               </motion.p>
@@ -127,22 +129,23 @@ export default function ProdutoPage() {
               <motion.h1
                 variants={fadeUpVariants}
                 initial={{ opacity: 1, y: 0 }}
-                className="mt-4 text-[clamp(2.7rem,5.2vw,5.8rem)] font-semibold leading-[0.95] tracking-[-0.05em] text-[#FFF0D1]"
+                className="mt-4 max-w-5xl text-[clamp(2.4rem,5vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.05em] text-[#FFF0D1]"
               >
-                Saia da confusão
+                Se você sabe que precisa mudar,
                 <br />
-                e construa uma vida com mais clareza,
-                direção e propósito.
+                mas continua travado e sem direção,
+                <br />
+                isso aqui é pra você.
               </motion.h1>
 
               <motion.p
                 variants={fadeUpVariants}
                 initial={{ opacity: 1, y: 0 }}
-                className="mt-8 max-w-3xl text-[clamp(1.06rem,1.24vw,1.24rem)] leading-[1.9] text-[#FFEAC5]/80"
+                className="mt-8 max-w-3xl text-[clamp(1rem,1.2vw,1.22rem)] leading-[1.9] text-[#FFEAC5]/80"
               >
-                Um processo para te ajudar a entender quem você é,
-                romper bloqueios internos e transformar autoconhecimento
-                em ação prática — com mais consciência, equilíbrio e direção.
+                Descubra o que está te bloqueando, ganhe clareza sobre quem você é
+                e construa um caminho real para sair do lugar — com direção,
+                confiança e ação.
               </motion.p>
 
               <motion.div
@@ -171,15 +174,72 @@ export default function ProdutoPage() {
                 </motion.a>
               </motion.div>
 
+              <motion.div
+                variants={sectionVariants}
+                initial={false}
+                animate="show"
+                className="mt-8 flex flex-wrap gap-3"
+              >
+                {[
+                  "Curso online",
+                  "Acesso digital",
+                  "Processo estruturado",
+                  "Autoconhecimento + ação prática",
+                ].map((chip, i) => (
+                  <motion.span
+                    key={i}
+                    variants={chipVariants}
+                    initial={{ opacity: 1, y: 0, scale: 1 }}
+                    className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-[#FFEAC5]/65"
+                  >
+                    {chip}
+                  </motion.span>
+                ))}
+              </motion.div>
+            </motion.div>
+          </section>
+
+          {/* VOCÊ JÁ TENTOU */}
+          <ProductSection>
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="max-w-4xl"
+            >
               <motion.p
                 variants={fadeUpVariants}
                 initial={{ opacity: 1, y: 0 }}
-                className="mt-6 text-sm text-[#FFEAC5]/60"
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
               >
-                Curso online • Acesso digital • Processo estruturado
+                Talvez isso já esteja acontecendo há algum tempo
+              </motion.p>
+
+              <motion.h2
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
+              >
+                Você já tentou mudar.
+                <br />
+                Mas, no fundo, continua no mesmo lugar.
+              </motion.h2>
+
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-6 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+              >
+                Você pensa, reflete, busca entender sua vida, tenta se organizar…
+                <br />
+                <br />
+                Mas, quando chega a hora de agir, algo trava.
+                Você perde força, volta para os mesmos padrões e sente que sua
+                vida não avança como poderia.
               </motion.p>
             </motion.div>
-          </section>
+          </ProductSection>
 
           {/* IDENTIFICAÇÃO */}
           <ProductSection>
@@ -203,8 +263,7 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
               >
-                Talvez você só esteja tentando mudar
-                sem a clareza que esse processo pede.
+                O problema não é falta de esforço.
               </motion.h2>
 
               <motion.p
@@ -212,13 +271,12 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-5 max-w-2xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
               >
-                Você pode até já ter pensado muito, refletido bastante
-                e tentado fazer diferente.
+                O problema é que você pode estar tentando agir sem clareza,
+                sem entender o que realmente está te travando.
                 <br />
                 <br />
-                Mas, mesmo assim, continua travado, sem direção clara,
-                sem conseguir sustentar movimento ou sentindo que algo
-                importante não se encaixa.
+                E isso mantém você preso no mesmo ciclo:
+                pensa muito, sente muito, mas anda pouco.
               </motion.p>
             </motion.div>
 
@@ -230,7 +288,7 @@ export default function ProdutoPage() {
               className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4"
             >
               {[
-                "Você sente que poderia estar vivendo algo maior, mas não sabe por onde começar.",
+                "Você sente que nasceu para algo maior, mas não sabe por onde começar.",
                 "Você quer mudar, mas trava na hora de agir.",
                 "Você vive no automático e sente que falta sentido.",
                 "Você entende muita coisa, mas ainda não transforma isso em direção prática.",
@@ -248,6 +306,48 @@ export default function ProdutoPage() {
                   </p>
                 </motion.div>
               ))}
+            </motion.div>
+          </ProductSection>
+
+          {/* BIG IDEA */}
+          <ProductSection>
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="max-w-4xl"
+            >
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
+              >
+                A grande virada de chave
+              </motion.p>
+
+              <motion.h2
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
+              >
+                O problema não é falta de propósito.
+                <br />
+                É falta de clareza e ação.
+              </motion.h2>
+
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-6 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+              >
+                Propósito não é algo mágico que simplesmente aparece.
+                <br />
+                <br />
+                Ele é construído quando você entende melhor quem é,
+                aprende a lidar com seus bloqueios e começa a agir com mais
+                direção, consistência e consciência.
+              </motion.p>
             </motion.div>
           </ProductSection>
 
@@ -273,8 +373,8 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
               >
-                Um processo de transformação pessoal
-                com profundidade e aplicação prática.
+                Um processo para sair da confusão mental
+                e entrar em ação com clareza e direção.
               </motion.h2>
 
               <motion.p
@@ -282,13 +382,14 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-5 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
               >
-                O Despertar de um Propósito foi criado para ajudar você
-                a se conhecer com mais profundidade, entender seus bloqueios
-                internos e construir uma direção mais coerente com quem você é.
+                O Despertar de um Propósito foi criado para ajudar você a se
+                conhecer com mais profundidade, entender seus bloqueios internos,
+                ganhar clareza sobre sua direção e transformar tudo isso em ação
+                prática.
                 <br />
                 <br />
                 Não é sobre motivação passageira.
-                É sobre clareza, coragem emocional e ação prática.
+                É sobre base, clareza, coragem emocional e movimento real.
               </motion.p>
             </motion.div>
           </ProductSection>
@@ -315,8 +416,8 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
               >
-                Você começa a sair da confusão
-                e construir uma vida mais alinhada com quem é.
+                Você deixa de se sentir travado
+                e começa a entrar em movimento.
               </motion.h2>
             </motion.div>
 
@@ -330,27 +431,27 @@ export default function ProdutoPage() {
               {[
                 {
                   title: "Mais clareza sobre si mesmo",
-                  text: "Você entende melhor suas forças, fragilidades, emoções e padrões.",
+                  text: "Você entende melhor seus padrões, emoções, forças, fragilidades e o que está por trás da sua confusão.",
                 },
                 {
                   title: "Mais consciência dos bloqueios",
-                  text: "Você começa a enxergar o que trava sua ação e interfere na sua constância.",
+                  text: "Você começa a enxergar o que trava sua ação e mantém você preso em ciclos de estagnação.",
                 },
                 {
                   title: "Mais equilíbrio interno",
-                  text: "Você sai do improviso emocional e começa a construir mais coerência entre áreas da vida.",
+                  text: "Você sai do improviso emocional e constrói mais coerência entre mente, rotina, escolhas e direção.",
                 },
                 {
                   title: "Mais direção",
-                  text: "Você desenvolve uma visão mais clara do que faz sentido para você.",
+                  text: "Você desenvolve uma visão mais clara do que faz sentido para você e do que quer construir.",
                 },
                 {
                   title: "Mais coragem para agir",
-                  text: "Você aprende a se mover com mais consciência, mesmo sem ter tudo resolvido.",
+                  text: "Você aprende a se mover com mais consciência, mesmo sem ter tudo resolvido ou perfeito.",
                 },
                 {
                   title: "Mais ação prática",
-                  text: "Você transforma reflexão em passos concretos e aplicáveis à sua realidade.",
+                  text: "Você transforma reflexão em passos concretos, aplicáveis e alinhados à sua realidade.",
                 },
               ].map((item, i) => (
                 <motion.div
@@ -370,10 +471,28 @@ export default function ProdutoPage() {
                 </motion.div>
               ))}
             </motion.div>
+
+            <motion.div
+              variants={fadeUpVariants}
+              initial={{ opacity: 1, y: 0 }}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.25 }}
+              className="mt-12 flex justify-center"
+            >
+              <motion.a
+                href="#oferta"
+                whileHover={{ scale: 1.02, y: -1 }}
+                whileTap={{ scale: 0.985 }}
+                transition={{ duration: 0.2 }}
+                className="inline-flex items-center justify-center rounded-full bg-[#E7992A] px-8 py-4 text-[clamp(0.96rem,1vw,1.04rem)] font-semibold text-[#0F1728] shadow-[0_10px_30px_rgba(231,153,42,0.18)]"
+              >
+                Quero destravar minha vida
+              </motion.a>
+            </motion.div>
           </ProductSection>
 
           {/* CONTEÚDO */}
-          <ProductSection className="scroll-mt-24" >
+          <ProductSection className="scroll-mt-24">
             <div id="conteudo" className="absolute -top-24" />
             <motion.div
               variants={sectionVariants}
@@ -410,33 +529,33 @@ export default function ProdutoPage() {
               {[
                 {
                   n: "01",
-                  title: "Clareza sobre quem você é",
-                  text: "Uma base para entender melhor sua identidade, emoções, fragilidades e padrões internos.",
+                  title: "Autoconhecimento profundo",
+                  text: "Uma base para entender melhor sua identidade, emoções, vulnerabilidades, padrões e forma de se perceber no mundo.",
                 },
                 {
                   n: "02",
                   title: "Bloqueios e travas emocionais",
-                  text: "Um mergulho nos medos, inseguranças, autossabotagens e barreiras que dificultam o movimento.",
+                  text: "Um mergulho nos medos, inseguranças, autossabotagens, ansiedades e barreiras que dificultam seu movimento.",
                 },
                 {
                   n: "03",
-                  title: "Mudança de mentalidade",
-                  text: "Uma nova forma de se posicionar diante da própria história, com mais responsabilidade e crescimento.",
+                  title: "Mindset e crenças",
+                  text: "Uma nova forma de interpretar sua história, suas possibilidades e sua capacidade de crescer e se reconstruir.",
                 },
                 {
                   n: "04",
                   title: "Equilíbrio entre áreas da vida",
-                  text: "Uma visão mais integrada entre rotina, energia, bem-estar e construção de uma vida coerente.",
+                  text: "Uma visão mais integrada entre rotina, energia, bem-estar, prioridades e construção de uma vida coerente.",
                 },
                 {
                   n: "05",
                   title: "Propósito, visão e direção",
-                  text: "Mais clareza sobre o que faz sentido para você, para onde quer ir e o que deseja construir.",
+                  text: "Mais clareza sobre o que faz sentido para você, para onde quer ir e o que deseja construir de forma intencional.",
                 },
                 {
                   n: "06",
                   title: "Plano de ação real",
-                  text: "Uma estrutura prática para tirar tudo do campo das ideias e transformar em movimento.",
+                  text: "Uma estrutura prática para tirar tudo do campo das ideias e transformar sua clareza em movimento.",
                 },
               ].map((item, i) => (
                 <motion.div
@@ -454,6 +573,87 @@ export default function ProdutoPage() {
                     {item.title}
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-[#FFEAC5]/72 sm:text-base">
+                    {item.text}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </ProductSection>
+
+          {/* MÉTODO */}
+          <ProductSection>
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="max-w-3xl"
+            >
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
+              >
+                A lógica do processo
+              </motion.p>
+
+              <motion.h2
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
+              >
+                Clareza. Desbloqueio. Direção. Ação.
+              </motion.h2>
+
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-5 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+              >
+                Primeiro, você entende melhor quem é e o que está vivendo.
+                Depois, começa a enxergar os padrões que estão te travando.
+                A partir disso, constrói direção com mais consciência
+                e transforma isso em ação prática.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.15 }}
+              className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
+            >
+              {[
+                {
+                  title: "Clareza",
+                  text: "Entender melhor quem você é, onde está e por que continua se sentindo travado.",
+                },
+                {
+                  title: "Desbloqueio",
+                  text: "Identificar medos, crenças e padrões que interferem no seu movimento.",
+                },
+                {
+                  title: "Direção",
+                  text: "Construir visão, propósito e coerência com mais consciência.",
+                },
+                {
+                  title: "Ação",
+                  text: "Transformar tudo isso em passos reais e sustentáveis na sua vida.",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  variants={cardVariants}
+                  initial={{ opacity: 1, y: 0, scale: 1 }}
+                  whileHover={{ y: -6, scale: 1.01 }}
+                  transition={{ duration: 0.22 }}
+                  className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+                >
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#E7992A]">
+                    {item.title}
+                  </p>
+                  <p className="mt-4 text-sm leading-7 text-[#FFEAC5]/75 sm:text-base">
                     {item.text}
                   </p>
                 </motion.div>
@@ -494,10 +694,11 @@ export default function ProdutoPage() {
                   className="mt-8 space-y-4"
                 >
                   {[
-                    "se sente travado e quer ganhar direção.",
-                    "vive no automático e sente que precisa mudar algo de forma mais profunda.",
+                    "sabe que precisa mudar, mas se sente travado e sem direção.",
+                    "vive no automático e sente que precisa de uma mudança mais profunda.",
                     "quer entender melhor quem é e por que continua se repetindo em certos padrões.",
-                    "quer parar de só pensar e começar a agir com mais consciência.",
+                    "está cansado de pensar demais e agir de menos.",
+                    "quer construir uma vida com mais clareza, sentido e ação prática.",
                   ].map((text, i) => (
                     <motion.div
                       key={i}
@@ -564,75 +765,6 @@ export default function ProdutoPage() {
             </div>
           </ProductSection>
 
-          {/* MÉTODO */}
-          <ProductSection>
-            <motion.div
-              variants={sectionVariants}
-              initial={false}
-              whileInView="show"
-              viewport={{ once: false, amount: 0.2 }}
-              className="max-w-3xl"
-            >
-              <motion.p
-                variants={fadeUpVariants}
-                initial={{ opacity: 1, y: 0 }}
-                className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
-              >
-                A lógica do processo
-              </motion.p>
-
-              <motion.h2
-                variants={fadeUpVariants}
-                initial={{ opacity: 1, y: 0 }}
-                className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
-              >
-                Clareza. Desbloqueio. Direção. Ação.
-              </motion.h2>
-
-              <motion.p
-                variants={fadeUpVariants}
-                initial={{ opacity: 1, y: 0 }}
-                className="mt-5 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
-              >
-                Primeiro, você entende melhor quem é e o que está vivendo.
-                Depois, começa a enxergar os padrões que estão te travando.
-                A partir disso, constrói direção com mais consciência
-                e transforma isso em ação prática.
-              </motion.p>
-            </motion.div>
-
-            <motion.div
-              variants={sectionVariants}
-              initial={false}
-              whileInView="show"
-              viewport={{ once: false, amount: 0.15 }}
-              className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-4"
-            >
-              {[
-                { title: "Clareza", text: "Entender melhor quem você é e onde está." },
-                { title: "Desbloqueio", text: "Identificar o que está te paralisando." },
-                { title: "Direção", text: "Construir visão, propósito e coerência." },
-                { title: "Ação", text: "Transformar tudo isso em passos reais." },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  variants={cardVariants}
-                  initial={{ opacity: 1, y: 0, scale: 1 }}
-                  whileHover={{ y: -6, scale: 1.01 }}
-                  transition={{ duration: 0.22 }}
-                  className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
-                >
-                  <p className="text-sm uppercase tracking-[0.2em] text-[#E7992A]">
-                    {item.title}
-                  </p>
-                  <p className="mt-4 text-sm leading-7 text-[#FFEAC5]/75 sm:text-base">
-                    {item.text}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </ProductSection>
-
           {/* SOBRE VOCÊ */}
           <ProductSection>
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[160px_1fr]">
@@ -672,8 +804,9 @@ export default function ProdutoPage() {
                   initial={{ opacity: 1, y: 0 }}
                   className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl"
                 >
-                  Eu criei esse curso para ajudar pessoas
-                  a saírem da confusão e construírem direção.
+                  Eu não criei esse curso para entregar teoria.
+                  <br />
+                  Criei para ajudar pessoas a saírem do lugar.
                 </motion.h2>
 
                 <motion.p
@@ -684,14 +817,14 @@ export default function ProdutoPage() {
                   Eu sou o Paulo.
                   <br />
                   <br />
-                  Criei esse processo a partir da percepção de um padrão
-                  muito comum: pessoas com potencial, mas presas em confusão,
-                  travamento e falta de direção.
+                  Criei esse processo a partir da percepção de um padrão muito comum:
+                  pessoas com potencial, mas presas em confusão, ansiedade, travamento
+                  e falta de direção.
                   <br />
                   <br />
-                  Meu objetivo com esse trabalho é ajudar você a sair do automático,
-                  se conhecer com mais profundidade e construir uma vida mais coerente
-                  com quem você é.
+                  Meu objetivo com esse trabalho é ajudar você a se conhecer com mais
+                  profundidade, entender o que está te bloqueando e construir uma vida
+                  mais coerente com quem você é.
                 </motion.p>
 
                 <motion.div
@@ -751,7 +884,8 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-5 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
               >
-                Tudo bem. Esse processo não parte da ideia de que você precisa chegar pronto,
+                Tudo bem.
+                Esse processo não parte da ideia de que você precisa chegar pronto,
                 nem de que já deveria ter todas as respostas.
                 <br />
                 <br />
@@ -793,9 +927,54 @@ export default function ProdutoPage() {
                 className="rounded-2xl border border-[#E7992A]/20 bg-[#E7992A] p-5 text-[#0F1728]"
               >
                 <p className="font-medium">
-                  O objetivo aqui não é te pressionar. É te ajudar a construir base,
-                  clareza e movimento com mais consciência.
+                  O objetivo aqui não é te pressionar.
+                  É te ajudar a construir base, clareza e movimento com mais consciência.
                 </p>
+              </motion.div>
+            </motion.div>
+          </ProductSection>
+
+          {/* CTA INTERMEDIÁRIO */}
+          <ProductSection>
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="mx-auto max-w-4xl text-center"
+            >
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
+              >
+                Se isso faz sentido para você
+              </motion.p>
+
+              <motion.h2
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl"
+              >
+                Talvez o que esteja faltando não seja mais informação.
+                <br />
+                Talvez seja um caminho.
+              </motion.h2>
+
+              <motion.div
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-8 flex justify-center"
+              >
+                <motion.a
+                  href="#oferta"
+                  whileHover={{ scale: 1.02, y: -1 }}
+                  whileTap={{ scale: 0.985 }}
+                  transition={{ duration: 0.2 }}
+                  className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/[0.02] px-8 py-4 text-[clamp(0.96rem,1vw,1.04rem)] text-[#FFEAC5]/85 transition duration-300 hover:border-white/20 hover:bg-white/[0.04]"
+                >
+                  Quero ver a oferta
+                </motion.a>
               </motion.div>
             </motion.div>
           </ProductSection>
@@ -823,9 +1002,11 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
               >
-                Se você sente que está vivendo abaixo
-                do que poderia, talvez seja hora
-                de construir isso com mais clareza.
+                Se você sabe que precisa mudar,
+                <br />
+                mas continua travado,
+                <br />
+                esse é o seu próximo passo.
               </motion.h2>
 
               <motion.p
@@ -833,10 +1014,44 @@ export default function ProdutoPage() {
                 initial={{ opacity: 1, y: 0 }}
                 className="mt-6 text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
               >
-                Esse curso foi criado para te ajudar a se conhecer melhor,
-                superar bloqueios internos e construir uma direção mais consciente
-                para a sua vida — com equilíbrio, coragem e ação prática.
+                O Despertar de um Propósito foi criado para te ajudar a se
+                conhecer melhor, superar bloqueios internos, ganhar clareza
+                sobre sua direção e transformar isso em ação prática.
               </motion.p>
+
+              <motion.div
+                variants={cardVariants}
+                initial={{ opacity: 1, y: 0, scale: 1 }}
+                whileInView="show"
+                viewport={{ once: false, amount: 0.25 }}
+                className="mx-auto mt-10 max-w-xl rounded-3xl border border-white/10 bg-white/5 p-8 text-left backdrop-blur-sm"
+              >
+                <p className="text-sm uppercase tracking-[0.22em] text-[#E7992A]">
+                  O que você recebe
+                </p>
+
+                <div className="mt-6 space-y-4">
+                  {[
+                    "Acesso ao curso completo em formato digital",
+                    "Processo estruturado em etapas claras",
+                    "Conteúdo para autoconhecimento, desbloqueio emocional, clareza de propósito e ação prática",
+                    "Material que te ajuda a sair da confusão e construir direção com mais consciência",
+                  ].map((item, i) => (
+                    <p key={i} className="text-[#FFEAC5]/85">
+                      • {item}
+                    </p>
+                  ))}
+                </div>
+
+                <div className="mt-8 rounded-2xl border border-[#E7992A]/20 bg-[#E7992A]/10 p-5">
+                  <p className="text-sm text-[#FFEAC5]/70">
+                    Aqui você pode colocar:
+                  </p>
+                  <p className="mt-2 text-[#FFEAC5]">
+                    preço • condição de pagamento • bônus • garantia
+                  </p>
+                </div>
+              </motion.div>
 
               <motion.div
                 variants={fadeUpVariants}
@@ -850,7 +1065,7 @@ export default function ProdutoPage() {
                   transition={{ duration: 0.2 }}
                   className="inline-flex items-center justify-center rounded-full bg-[#E7992A] px-8 py-4 text-[clamp(0.96rem,1vw,1.04rem)] font-semibold text-[#0F1728] shadow-[0_10px_30px_rgba(231,153,42,0.18)]"
                 >
-                  Quero entrar
+                  Quero entrar agora
                 </motion.a>
               </motion.div>
 
