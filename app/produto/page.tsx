@@ -1163,7 +1163,7 @@ export default function ProdutoPage() {
                   initial={{ opacity: 1, y: 0 }}
                   className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl"
                 >
-                  Você entra sem pressão e com segurança.
+                  Você entra sem risco.
                 </motion.h2>
 
                 <motion.p
@@ -1171,12 +1171,15 @@ export default function ProdutoPage() {
                   initial={{ opacity: 1, y: 0 }}
                   className="mt-6 max-w-3xl text-base leading-8 text-[#FFEAC5]/80 sm:text-lg"
                 >
-                  Você terá uma garantia de 7 dias para conhecer o conteúdo e entender
-                  se esse processo faz sentido para você.
+                  Você pode acessar o curso, assistir, explorar o conteúdo e testar na prática.
                   <br />
                   <br />
-                  Se dentro desse prazo você perceber que não era o que buscava,
-                  poderá solicitar o reembolso.
+                  Se dentro de 7 dias você sentir que não faz sentido para você,
+                  é só pedir reembolso.
+                  <br />
+                  <br />
+                  Sem burocracia.
+                  Sem perguntas.
                 </motion.p>
               </motion.div>
             </motion.div>
@@ -1443,11 +1446,13 @@ export default function ProdutoPage() {
                 <div className="mt-6 space-y-4">
                   {[
                     "Acesso ao curso completo em formato digital",
-                    "Processo estruturado com base no Método CDA",
+                    "Processo estruturado com base no Método CDA (Clareza, Desbloqueio, Direção e Ação)",
+                    "Mais de 30 horas de conteúdo organizadas de forma progressiva para facilitar sua aplicação",
+                    "Mais de 140 aulas estruturadas em uma sequência lógica para te tirar da confusão e te colocar em movimento",
                     "Conteúdo para autoconhecimento, desbloqueio emocional, clareza de propósito e ação prática",
                     "Ferramentas práticas para sair da teoria e aplicar na vida real",
                     "Bônus com aplicação de suporte para rotina, mentalidade e execução",
-                    "Garantia de 7 dias",
+                    "Garantia de 7 dias (você pode testar sem risco)",
                   ].map((item, i) => (
                     <p key={i} className="text-[#FFEAC5]/85">
                       • {item}
