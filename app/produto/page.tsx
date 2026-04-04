@@ -118,13 +118,6 @@ export default function ProdutoPage() {
               animate="show"
               className="relative z-10 max-w-5xl"
             >
-              <motion.p
-                variants={fadeUpVariants}
-                initial={{ opacity: 1, y: 0 }}
-                className="text-xs font-medium uppercase tracking-[0.24em] text-[#E7992A] sm:text-sm"
-              >
-                O Despertar de um Propósito
-              </motion.p>
 
               <motion.h1
                 variants={fadeUpVariants}
