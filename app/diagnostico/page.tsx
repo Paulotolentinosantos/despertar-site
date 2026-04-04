@@ -624,6 +624,17 @@ export default function DiagnosticoPage() {
 
                   <motion.div
                     variants={itemVariants}
+                    className="mt-6 rounded-2xl border border-[#E7992A]/20 bg-[#E7992A]/10 p-5"
+                  >
+                    <p className="text-sm leading-7 text-[#FFEAC5]/85">
+                      Você também vai receber este resultado por e-mail para
+                      consultar depois. Se ele não aparecer em alguns minutos,
+                      confira sua caixa de spam ou promoções.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    variants={itemVariants}
                     className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2"
                   >
                     <motion.div
