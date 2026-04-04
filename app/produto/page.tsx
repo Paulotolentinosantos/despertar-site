@@ -765,6 +765,87 @@ export default function ProdutoPage() {
             </div>
           </ProductSection>
 
+          {/* BÔNUS */}
+          <ProductSection>
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="max-w-4xl"
+            >
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
+              >
+                Bônus especial
+              </motion.p>
+
+              <motion.h2
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
+              >
+                Além do curso, você também recebe uma aplicação de suporte
+                para te ajudar a sair da intenção e entrar na prática.
+              </motion.h2>
+
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-6 max-w-3xl text-base leading-8 text-[#FFEAC5]/75 sm:text-lg"
+              >
+                Esse bônus foi pensado para te ajudar a sustentar a mentalidade,
+                organizar sua rotina e manter em movimento aquilo que precisa ser
+                concluído.
+                <br />
+                <br />
+                A ideia não é só te entregar clareza, mas também te dar um apoio
+                prático para aplicar no dia a dia o que você aprender dentro do curso.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.15 }}
+              className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3"
+            >
+              {[
+                {
+                  title: "Mais constância",
+                  text: "Um apoio para manter aquilo que você definiu como importante em evidência no seu dia a dia.",
+                },
+                {
+                  title: "Mais execução",
+                  text: "Uma forma de reduzir o risco de ficar só na reflexão e aumentar suas chances de realmente concluir o que precisa ser feito.",
+                },
+                {
+                  title: "Mais reforço mental",
+                  text: "Um suporte para fortalecer a mentalidade e sustentar com mais firmeza o processo de mudança ao longo do tempo.",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  variants={cardVariants}
+                  initial={{ opacity: 1, y: 0, scale: 1 }}
+                  whileHover={{ y: -6, scale: 1.01 }}
+                  transition={{ duration: 0.22 }}
+                  className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+                >
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#E7992A]">
+                    {item.title}
+                  </p>
+                  <p className="mt-4 text-sm leading-7 text-[#FFEAC5]/75 sm:text-base">
+                    {item.text}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </ProductSection>
+
           {/* SOBRE VOCÊ */}
           <ProductSection>
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[160px_1fr]">
@@ -852,6 +933,126 @@ export default function ProdutoPage() {
                 </motion.div>
               </motion.div>
             </div>
+          </ProductSection>
+
+          {/* GARANTIA */}
+          <ProductSection>
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="mx-auto max-w-4xl"
+            >
+              <motion.div
+                variants={cardVariants}
+                initial={{ opacity: 1, y: 0, scale: 1 }}
+                className="rounded-3xl border border-[#E7992A]/20 bg-[#E7992A]/10 p-8 md:p-10"
+              >
+                <motion.p
+                  variants={fadeUpVariants}
+                  initial={{ opacity: 1, y: 0 }}
+                  className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
+                >
+                  Garantia
+                </motion.p>
+
+                <motion.h2
+                  variants={fadeUpVariants}
+                  initial={{ opacity: 1, y: 0 }}
+                  className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl"
+                >
+                  Você entra sem pressão e com segurança.
+                </motion.h2>
+
+                <motion.p
+                  variants={fadeUpVariants}
+                  initial={{ opacity: 1, y: 0 }}
+                  className="mt-6 max-w-3xl text-base leading-8 text-[#FFEAC5]/80 sm:text-lg"
+                >
+                  Você terá uma garantia de 7 dias para conhecer o conteúdo e entender
+                  se esse processo faz sentido para você.
+                  <br />
+                  <br />
+                  Se dentro desse prazo você perceber que não era o que buscava,
+                  poderá solicitar o reembolso.
+                </motion.p>
+              </motion.div>
+            </motion.div>
+          </ProductSection>
+
+          {/* FAQ */}
+          <ProductSection>
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="max-w-4xl"
+            >
+              <motion.p
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[#E7992A]"
+              >
+                Perguntas frequentes
+              </motion.p>
+
+              <motion.h2
+                variants={fadeUpVariants}
+                initial={{ opacity: 1, y: 0 }}
+                className="mt-4 text-3xl font-semibold leading-tight text-[#FFF0D1] sm:text-4xl lg:text-5xl"
+              >
+                Algumas dúvidas que podem estar passando pela sua cabeça
+              </motion.h2>
+            </motion.div>
+
+            <motion.div
+              variants={sectionVariants}
+              initial={false}
+              whileInView="show"
+              viewport={{ once: false, amount: 0.15 }}
+              className="mt-12 space-y-4"
+            >
+              {[
+                {
+                  q: "Esse curso é para quem ainda não sabe qual é o seu propósito?",
+                  a: "Sim. Na verdade, ele foi pensado justamente para pessoas que sentem confusão, travamento e falta de direção. O processo ajuda você a construir clareza, não exige que você já chegue com respostas prontas.",
+                },
+                {
+                  q: "Preciso estar em um momento ‘certo’ da vida para fazer esse curso?",
+                  a: "Não. Você só precisa sentir que quer entender melhor a si mesmo e começar a construir uma mudança mais consciente na sua vida.",
+                },
+                {
+                  q: "Esse curso é só teórico?",
+                  a: "Não. A proposta é unir profundidade e aplicação prática. A ideia é que você não fique apenas refletindo, mas transforme o que aprende em direção e ação.",
+                },
+                {
+                  q: "Por quanto tempo terei acesso?",
+                  a: "Aqui você pode preencher de acordo com sua configuração real de acesso, por exemplo: 1 ano de acesso, acesso por 6 meses ou acesso vitalício.",
+                },
+                {
+                  q: "Como funciona a garantia?",
+                  a: "Você terá um prazo de 7 dias para conhecer o conteúdo. Se entender que o curso não faz sentido para você, poderá solicitar o reembolso dentro desse período.",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  variants={cardVariants}
+                  initial={{ opacity: 1, y: 0, scale: 1 }}
+                  whileHover={{ y: -4, scale: 1.005 }}
+                  transition={{ duration: 0.22 }}
+                  className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+                >
+                  <p className="text-lg font-semibold text-[#FFF0D1]">
+                    {item.q}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-[#FFEAC5]/75 sm:text-base">
+                    {item.a}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
           </ProductSection>
 
           {/* OBJEÇÕES */}
