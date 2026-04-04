@@ -13,8 +13,11 @@ export default function Navbar({
   ctaLabel = "Fazer diagnóstico",
   ctaHref = "/diagnostico",
   showCta = true,
-  logoSrc = "/logo-despertar.png",
+  logoSrc,
 }: NavbarProps) {
+  // fallback seguro
+  const finalLogo = logoSrc || "/logo-despertar.png"
+
   return (
     <header className="fixed top-0 left-0 z-50 w-full border-b border-white/5 bg-[#0F1728]/80 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-10 lg:px-16">
@@ -22,11 +25,11 @@ export default function Navbar({
         {/* LOGO */}
         <div className="flex items-center">
           <Image
-            src={logoSrc}
-            alt="Logo"
-            width={180}
-            height={60}
-            className="h-8 md:h-10 w-auto object-contain"
+            src={finalLogo}
+            alt={finalLogo} // ajuda a ver se mudou no inspect
+            width={220}
+            height={70}
+            className="h-9 md:h-11 w-auto object-contain"
             priority
           />
         </div>
