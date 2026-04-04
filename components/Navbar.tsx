@@ -38,7 +38,7 @@ export default function Navbar({
         {showCta && (
           <a
             href={ctaHref}
-            className="rounded-full bg-[#E7992A] px-5 py-2 text-sm font-semibold text-[#0F1728] transition hover:scale-[1.03]"
+            className="rounded-full bg-[#E7992A] px-3 py-1.5 text-xs font-semibold text-[#0F1728] transition hover:scale-[1.03] md:px-5 md:py-2 md:text-sm"
           >
             {ctaLabel}
           </a>
