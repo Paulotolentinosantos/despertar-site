@@ -2,7 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import { trackLead } from "../lib/tracking";
+import {
+  trackLead,
+  trackQuizComplete,
+  trackQuizStart,
+  trackQuizStep,
+} from "../lib/tracking";
 
 const questions = [
   "Sinto que estou vivendo abaixo do meu potencial, mas não consigo mudar isso.",
@@ -206,6 +211,10 @@ export default function DiagnosticoPage() {
       : 0;
 
   function startQuiz() {
+    trackQuizStart({
+      content_name: "Quiz Diagnóstico",
+    });
+
     setStep("questions");
     setCurrentQuestion(0);
     setAnswers([]);
@@ -216,7 +225,15 @@ export default function DiagnosticoPage() {
     newAnswers[currentQuestion] = value;
     setAnswers(newAnswers);
 
+    trackQuizStep({
+      step: currentQuestion + 1,
+      content_name: "Quiz Diagnóstico",
+    });
+
     if (currentQuestion === questions.length - 1) {
+      trackQuizComplete({
+        content_name: "Quiz Diagnóstico",
+      });
       setStep("lead");
     } else {
       setCurrentQuestion(currentQuestion + 1);
