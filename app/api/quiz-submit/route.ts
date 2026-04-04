@@ -117,70 +117,196 @@ function buildResultadoEmail(params: {
 
   const subject = "Seu resultado do diagnóstico está salvo aqui";
 
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    process.env.SITE_URL ||
+    process.env.APP_URL ||
+    "";
+
+  const logoUrl = siteUrl
+    ? `${siteUrl.replace(/\/$/, "")}/logo-despertar.png`
+    : "";
+
+  const logoBlock = logoUrl
+    ? `
+      <tr>
+        <td align="center" style="padding:0 0 18px 0;">
+          <img
+            src="${logoUrl}"
+            alt="O Despertar de um Propósito"
+            width="220"
+            style="display:block; width:220px; max-width:100%; height:auto; border:0; outline:none; text-decoration:none; margin:0 auto;"
+          />
+        </td>
+      </tr>
+    `
+    : `
+      <tr>
+        <td align="center" style="padding:0 0 18px 0;">
+          <div style="font-size:12px; line-height:1; letter-spacing:2px; text-transform:uppercase; color:#E7992A; font-weight:700; margin-bottom:10px;">
+            O Despertar de um Propósito
+          </div>
+          <div style="width:72px; height:3px; background:#E7992A; border-radius:999px; margin:0 auto;"></div>
+        </td>
+      </tr>
+    `;
+
   const html = `
   <!DOCTYPE html>
-  <html>
-    <body style="margin:0; padding:0; background:#0F1728; font-family:Arial, sans-serif;">
-      <table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
+  <html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>${subject}</title>
+    </head>
+    <body style="margin:0; padding:0; background-color:#07101f; font-family:Arial, Helvetica, sans-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0; padding:0; width:100%; background-color:#07101f;">
         <tr>
-          <td align="center">
-            <table width="600" cellpadding="0" cellspacing="0" style="background:#0F1728; border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:32px; color:#FFEAC5;">
+          <td align="center" style="padding:32px 14px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:640px; margin:0 auto;">
               <tr>
-                <td style="font-size:22px; font-weight:bold; color:#FFF0D1; text-align:center;">
-                  Seu diagnóstico está pronto
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding-top:20px; font-size:14px; line-height:1.7; color:#FFEAC5;">
-                  Olá, <strong>${nome}</strong>.<br><br>
-                  Estou te enviando este e-mail para que você não perca o registro do seu diagnóstico.
-                  Assim, você pode revisitar seu resultado com mais calma sempre que quiser.
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding-top:24px;">
-                  <div style="background:rgba(231,153,42,0.1); border:1px solid rgba(231,153,42,0.3); padding:16px; border-radius:12px; text-align:center;">
-                    <div style="font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#E7992A;">
-                      Seu perfil
-                    </div>
-                    <div style="margin-top:6px; font-size:18px; font-weight:bold; color:#FFEAC5;">
-                      ${perfil}
-                    </div>
+                <td align="center" style="padding:0 0 14px 0;">
+                  <div style="font-size:11px; line-height:1.2; letter-spacing:2px; text-transform:uppercase; color:#E7992A; font-weight:700;">
+                    Resultado do diagnóstico
                   </div>
                 </td>
               </tr>
 
               <tr>
-                <td style="padding-top:20px; font-size:14px; line-height:1.7; color:#FFEAC5;">
-                  ${descricao}
+                <td style="border-radius:26px; overflow:hidden; border:1px solid #202b3f; background-color:#0F1728;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td
+                        style="
+                          padding:34px 28px 26px 28px;
+                          background:
+                            radial-gradient(circle at top left, rgba(231,153,42,0.14), transparent 34%),
+                            radial-gradient(circle at top right, rgba(231,153,42,0.08), transparent 28%),
+                            linear-gradient(180deg, #0F1728 0%, #0B1322 100%);
+                        "
+                      >
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                          ${logoBlock}
+
+                          <tr>
+                            <td align="center" style="font-size:30px; line-height:1.2; font-weight:700; color:#FFF0D1;">
+                              Seu diagnóstico está pronto
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td align="center" style="padding-top:12px; font-size:15px; line-height:1.8; color:#FFEAC5;">
+                              Guarde este e-mail para revisitar seu resultado com mais calma sempre que quiser.
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td style="padding-top:24px;">
+                              <div style="height:1px; background:linear-gradient(90deg, rgba(231,153,42,0), rgba(231,153,42,0.45), rgba(231,153,42,0));"></div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="padding:26px 28px 0 28px; font-size:15px; line-height:1.9; color:#FFEAC5;">
+                        Olá, <strong style="color:#FFF0D1;">${nome}</strong>.
+                        <br /><br />
+                        Estou te enviando este e-mail para que você não perca o registro do seu diagnóstico.
+                        Assim, você pode revisitar esse conteúdo com mais calma e usar esse resultado como referência para refletir e agir com mais clareza.
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="padding:24px 28px 0 28px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="border-radius:18px; border:1px solid rgba(231,153,42,0.34); background:linear-gradient(180deg, rgba(231,153,42,0.18) 0%, rgba(231,153,42,0.10) 100%); padding:20px 18px; text-align:center;">
+                              <div style="font-size:11px; line-height:1.2; letter-spacing:1.8px; text-transform:uppercase; color:#E7992A; font-weight:700;">
+                                Seu perfil
+                              </div>
+                              <div style="margin-top:10px; font-size:22px; line-height:1.45; color:#FFF0D1; font-weight:700;">
+                                ${perfil}
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="padding:18px 28px 0 28px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="border-radius:18px; border:1px solid rgba(255,255,255,0.09); background:#121c2e; padding:22px 20px;">
+                              <div style="font-size:11px; line-height:1.2; letter-spacing:1.8px; text-transform:uppercase; color:#E7992A; font-weight:700;">
+                                Leitura do resultado
+                              </div>
+                              <div style="margin-top:12px; font-size:15px; line-height:1.9; color:#FFEAC5;">
+                                ${descricao}
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="padding:18px 28px 0 28px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="border-radius:18px; border:1px solid rgba(255,255,255,0.10); background:rgba(255,255,255,0.04); padding:22px 20px;">
+                              <div style="font-size:11px; line-height:1.2; letter-spacing:1.8px; text-transform:uppercase; color:#E7992A; font-weight:700;">
+                                O que fazer agora
+                              </div>
+                              <div style="margin-top:12px; font-size:15px; line-height:1.9; color:#FFEAC5;">
+                                ${acao}
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="padding:18px 28px 0 28px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="border-radius:16px; border:1px solid rgba(162,70,23,0.38); background:rgba(162,70,23,0.14); padding:16px 18px;">
+                              <div style="font-size:13px; line-height:1.8; color:#FFEAC5;">
+                                Este e-mail foi enviado para que você tenha esse registro salvo e possa revisitar seu diagnóstico sempre que precisar.
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="padding:26px 28px 0 28px;">
+                        <div style="height:1px; background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.10), rgba(255,255,255,0));"></div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td align="center" style="padding:18px 28px 30px 28px;">
+                        <div style="font-size:11px; line-height:1.8; color:#FFEAC5; opacity:0.56;">
+                          © 2026 O Despertar de um Propósito<br />
+                          Este e-mail foi enviado porque você realizou o diagnóstico.
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
 
               <tr>
-                <td style="padding-top:20px;">
-                  <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:16px; border-radius:12px;">
-                    <div style="font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#E7992A;">
-                      O que fazer agora
-                    </div>
-                    <div style="margin-top:6px; font-size:14px; line-height:1.7; color:#FFEAC5;">
-                      ${acao}
-                    </div>
+                <td align="center" style="padding-top:14px;">
+                  <div style="font-size:11px; line-height:1.6; color:#FFEAC5; opacity:0.35;">
+                    Se você não reconhecer este envio, basta desconsiderar esta mensagem.
                   </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding-top:24px; font-size:13px; line-height:1.7; color:#FFEAC5; opacity:0.75;">
-                  Enviamos este e-mail para que você não perca esse registro e possa revisitar seu diagnóstico depois com mais calma.
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding-top:28px; font-size:11px; line-height:1.6; color:#FFEAC5; opacity:0.5; text-align:center;">
-                  © 2026 O Despertar de um Propósito<br>
-                  Este e-mail foi enviado porque você realizou o diagnóstico.
                 </td>
               </tr>
             </table>
@@ -194,18 +320,24 @@ function buildResultadoEmail(params: {
   const text = `
 Olá, ${params.nome}.
 
+Seu diagnóstico está pronto.
+
 Estou te enviando este e-mail para que você não perca o registro do seu diagnóstico.
+Assim, você pode revisitar esse conteúdo com mais calma e usar esse resultado como referência para refletir e agir com mais clareza.
 
 Seu perfil:
 ${params.perfil}
 
-Resultado:
+Leitura do resultado:
 ${params.descricao}
 
 O que fazer agora:
 ${params.acao}
 
-Enviamos este e-mail para que você possa revisitar esse registro depois com mais calma.
+Este e-mail foi enviado para que você tenha esse registro salvo e possa revisitar seu diagnóstico sempre que precisar.
+
+© 2026 O Despertar de um Propósito
+Este e-mail foi enviado porque você realizou o diagnóstico.
   `.trim();
 
   return { subject, html, text };
